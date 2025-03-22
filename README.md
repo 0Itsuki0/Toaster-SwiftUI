@@ -201,6 +201,12 @@ HStack() {
     }, label: {
         Text("Remove")
     })
+    
+    Button(action: {
+        removeToast()
+    }, label: {
+        Text("Remove all")
+    })
 }
 ```
 
