@@ -38,6 +38,12 @@ internal final class ToastManager {
         })
     }
     
+    func removeAllToasts() {
+        withAnimation(animation,  {
+            toasts.removeAll()
+        })
+    }
+    
     func toastLoaded(_ toast: ToastConfig) {
         guard let firstIndex = self.toasts.firstIndex(where: {$0.id == toast.id}) else { return }
         self.toasts[firstIndex].loaded = true

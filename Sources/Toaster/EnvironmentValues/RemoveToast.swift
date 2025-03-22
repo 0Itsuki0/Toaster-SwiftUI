@@ -33,4 +33,9 @@ public struct RemoveToastAction: Sendable {
     public func callAsFunction(_ id: ToastConfig.ID) {
         manager.removeToast(id)
     }
+    
+    // remove all toasts
+    public func callAsFunction() {
+        manager.removeAllToasts()
+    }
 }
