@@ -24,7 +24,7 @@ public struct AddToastAction: Sendable {
     internal weak var _manager: ToastManager?
     private var manager: ToastManager {
         guard let _manager else {
-            fatalError("ProvideToast must be called on a parent view to use EnvironmentValues.addToast.")
+            fatalError("provideToaster must be called on a parent view to use EnvironmentValues.addToast.")
         }
         return _manager
     }
